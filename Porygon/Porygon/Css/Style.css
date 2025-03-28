@@ -1,0 +1,15 @@
+.grafici-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grafico {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    float: right;
+}

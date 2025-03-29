@@ -1,0 +1,264 @@
+/* Corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Nasconde la barra di scorrimento orizzontale */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+    padding: 10px 20px;
+    font-size: 22px;
+}
+
+.navbar img {
+    height: 60px; /* Imposta l'altezza dell'immagine */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    background-color: #F2C4E2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Pannelli di contenuto */
+.pannello_di_sinistra, .pannello_grafico, .pannello_impronta {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(254, 235, 235);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    width: 33%; /* Imposta la larghezza dei pannelli */
+    margin-bottom: -30px;
+    
+}
+
+.pannello_di_sinistra {
+    margin-right: 20px; /* Aggiunge spazio tra il pannello sinistro e gli altri */
+}
+
+.pannello_grafico {
+    margin-right: 20px; /* Aggiunge spazio tra il pannello grafico e gli altri */
+}
+
+h2{
+    text-align: center;
+}
+
+/* Layout delle opzioni e degli elementi inseriti */
+.options {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 110px;
+}
+
+.inserted{
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 404px;
+}
+
+/* Bottone per il drag-and-drop */
+.draggableButton {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    width: 100px;
+    transition: background-color 0.3s; /* Transizione per il cambio di colore al passaggio del mouse */
+}
+
+.draggableButton:hover {
+    background-color: purple;
+}
+
+.footer {
+    margin-top: 130px;
+    text-align: center;
+    padding: 20px;
+    background-color: purple;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.toggle-nav {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.toggle-nav:hover {
+    background-color: purple;
+}
+
+/* Finestra modale per la modifica */
+.modifica {
+    display: block;
+}
+
+#mostra {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 100; /* Assicura che la finestra modale sia sopra gli altri elementi */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.darker {
+    filter: brightness(70%); /* Imposta una modalità scura per il corpo della pagina */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(218, 218, 218, 0.392); /* Sovrapposizione semi-trasparente */
+    z-index: 99; /* Si trova sopra al contenuto principale ma sotto alla finestra modale */
+}
+
+/* Media queries per la responsività */
+
+/* Quando la larghezza della finestra è inferiore a 1200px */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column; /* Modifica il layout della container per colonne */
+        padding: 10px;
+    }
+
+    .pannello_di_sinistra, .pannello_grafico {
+        margin-right: 0;
+        margin-bottom: 20px; /* Aggiunge spazio sotto i pannelli */
+    }
+
+    .navbar {
+        font-size: 18px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
+/* Quando la larghezza della finestra è inferiore a 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .toggle-nav {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Quando la larghezza della finestra è inferiore a 480px */
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 16px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .pannello_di_sinistra, .pannello_grafico {
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .draggableButton {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .toggle-nav {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}

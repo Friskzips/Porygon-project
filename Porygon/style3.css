@@ -1,0 +1,134 @@
+/* Corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Colore di sfondo chiaro */
+    color: #333; /* Colore testo principale */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4B0082; /* Colore viola per la navbar */
+    padding: 10px 20px;
+    font-size: 22px;
+}
+
+.navbar img {
+    height: 60px; /* Imposta l'altezza dell'immagine */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px; /* Spazio tra gli elementi della navbar */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Effetto hover per il link */
+}
+
+/* Header */
+.header {
+    background-color: #9406f9; /* Viola più chiaro */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 30px; /* Separazione tra header e form */
+}
+
+/* Form Login */
+#form_login {
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra attorno al form */
+    margin-top: 110px; /* Separazione dal contenuto precedente */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Organizza gli elementi del form in colonna */
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #6a1b9a; /* Colore viola per i label */
+}
+
+form input[type="text"],[type ="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #ccc; /* Bordo grigio chiaro per i campi input */
+    border-radius: 5px;
+    width: 100%; /* Imposta la larghezza dell'input al 100% */
+}
+
+form input[type="submit"] {
+    background-color: #6a1b9a; /* Colore viola per il bottone */
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transizione per il cambio colore */
+}
+
+form input[type="submit"]:hover {
+    background-color: #9c4dcc; /* Colore viola più chiaro al passaggio del mouse */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column; /* Modifica la navbar a colonna per schermi più piccoli */
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Aggiunge spazio tra i link */
+    }
+
+    .header h1 {
+        font-size: 28px; /* Riduce la dimensione del font nel titolo dell'header */
+    }
+
+    #form_login {
+        width: 90%; /* Imposta il form al 90% della larghezza su schermi piccoli */
+        padding: 20px; /* Riduce il padding del form */
+    }
+}
+
+/* Footer */
+.footer {
+    margin-top: 130px; /* Spazio sopra il footer */
+    text-align: center;
+    padding: 20px;
+    background-color: #6a0dad; 
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}

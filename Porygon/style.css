@@ -1,0 +1,289 @@
+/* Corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #efefef;
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Nasconde la barra di scorrimento orizzontale */
+}
+
+main{
+    margin-bottom: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color :#F2C4E2;
+    padding: 10px 20px;
+    font-size: 22px;
+}
+
+.navbar img {
+    height: 60px; /* Imposta l'altezza dell'immagine */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: purple;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    display: center; 
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.welcome h2 {
+    color: #4B0082;
+    text-align: center;
+}
+
+.welcome p {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Bottone Calcola */
+.bottone_calcola {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Rendi il bottone a larghezza completa */
+    max-width: 300px; /* Imposta una larghezza massima per il bottone */
+    display: block; 
+    margin: 0 auto; /* Centra il bottone orizzontalmente */
+    box-sizing: border-box; /* Include padding e border nella larghezza totale */
+    text-align: center;
+}
+
+.bottone_calcola:hover {
+    background-color: #5a4e9e;
+}
+
+/* Sezione informazioni */
+.informazioni {
+    background-color: #F2C4E2;
+    padding: 30px 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.informazioni2{
+    text-align: center;
+    background-color: #F2C4E2;
+    padding: 30px 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.informazioni h2,
+.informazioni h3 {
+    color: #4B0082;
+}
+
+.informazioni p {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Gestione grafici */
+.grafici-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grafico {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: purple;
+    color: white;
+    width: 100%;
+    height: 60px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Pulsante toggle per la nav bar */
+.toggle-nav {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.toggle-nav:hover {
+    background-color: purple;
+}
+
+/* Media Queries per la responsività */
+
+/* Quando la larghezza della finestra è inferiore a 1200px */
+@media (max-width: 1200px) {
+    .navbar {
+        font-size: 18px;
+    }
+
+    .navbar img {
+        height: 50px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .bottone_calcola {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .grafici-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grafico {
+        min-width: 280px;
+        margin-bottom: 20px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+/* Quando la larghezza della finestra è inferiore a 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .bottone_calcola {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .informazioni {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .grafici-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .grafico {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+/* Quando la larghezza della finestra è inferiore a 480px */
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .navbar img {
+        height: 40px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .bottone_calcola {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
+
+    .grafico {
+        min-width: 100%;
+    }
+}

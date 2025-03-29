@@ -1,0 +1,225 @@
+/* Corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Colore di sfondo chiaro */
+    margin: 0;
+    line-height: 1.6; /* Altezza della riga per il testo */
+    overflow-x: hidden; /* Impedisce lo scroll orizzontale */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #96448a; /* Colore viola per la navbar */
+    padding: 15px 20px;
+    font-size: 22px;
+    /* width: 100%; rimosso per evitare problemi di larghezza */
+}
+
+.navbar img {
+    height: 60px; /* Altezza dell'immagine nella navbar */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px; /* Distanza tra gli elementi della navbar */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Aggiunge una sottolineatura quando il mouse passa sopra */
+}
+
+/* Header */
+.header {
+    background-color: #ffffff; /* Colore viola chiaro per l'header */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 100px; /* Separazione dal contenuto sottostante */
+}
+
+/* Sezione informazioni */
+.informazioni {
+    background-color: #ffffff; /* Colore di sfondo bianco */
+    padding: 40px 30px;
+    /* margin-top: 30px; rimosso per evitare margini extra */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    max-width: 1300px; /* Limita la larghezza massima */
+    margin: 40px auto; /* Centra la sezione orizzontalmente */
+}
+
+/* Grafici */
+.grafici-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Spazio tra i grafici */
+    padding: 20px;
+}
+
+.grafico {
+    flex: 1;
+    min-width: 300px; /* Larghezza minima per ogni grafico */
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6a0dad; /* Colore viola per il footer */
+    color: white;
+    width: 100%;
+    height: 60px;
+    margin-top: 208px; /* Separazione dal contenuto precedente */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px; /* Font di dimensione piccola per il testo nel footer */
+}
+
+/* Pulsante di navigazione */
+.toggle-nav {
+    padding: 10px 20px;
+    background-color: purple; /* Colore di sfondo viola */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.toggle-nav:hover {
+    background-color: darkviolet; /* Colore più scuro al passaggio del mouse */
+}
+
+/* Contenitore principale delle stanze */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare a capo quando ci sono più di 3 elementi */
+    gap: 50px;
+    justify-content: center; /* Centra gli elementi */
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+}
+
+/* Stanza (div con stile specifico) */
+.stanze, .stanzaV {
+    width: 400px; /* Larghezza di ogni stanza */
+    height: 300px; /* Altezza di ogni stanza */
+    background-color: #fee1fe; /* Colore di sfondo rosa */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; /* Dimensione del testo */
+    border-radius: 10px; /* Angoli arrotondati */
+    transition: all 0.3s ease; /* Transizione morbida */
+    position: relative; /* Posiziona gli elementi all'interno */
+}
+
+.stanzaV {
+    opacity: 0.3; /* Aggiunge trasparenza per le stanze non attive */
+    background-color: #4e4e4e; /* Colore grigio scuro per stanze non attive */
+}
+
+.stanzaV:hover {
+    opacity: 0.4; /* Cambia trasparenza quando il mouse passa sopra */
+}
+
+/* Pulsante dentro la stanza */
+.but {
+    color: white; /* Colore del testo */
+    background-color: #4e4e4e; /* Colore di sfondo grigio */
+    border: none;
+    padding: 0;
+    width: 100%; /* Il pulsante occupa tutta la larghezza della stanza */
+    height: 100%; /* Il pulsante occupa tutta l'altezza della stanza */
+    display: flex;
+    justify-content: center; /* Centra il testo orizzontalmente */
+    align-items: center; /* Centra il testo verticalmente */
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px; /* Angoli arrotondati per il pulsante */
+    position: absolute; /* Posiziona il pulsante sopra il div della stanza */
+}
+
+.but:hover {
+    opacity: 1; /* Ripristina l'opacità al passaggio del mouse */
+}
+
+/* Canvas */
+canvas {
+    min-width: 50px;
+    text-align: right;
+}
+
+/* Centrare il testo nelle celle */
+.center-text {
+    text-align: center;
+    font-size: 23px;
+    padding-bottom: 17px;
+    vertical-align: middle; /* Centra verticalmente il contenuto */
+}
+
+/* Pulsante Entra (pulsante chiaro) */
+.entra {
+    background-color: #f0f0f0; /* Colore di sfondo chiaro */
+    color: #4e4e4e; /* Colore del testo scuro */
+    border-radius: 5px;
+    border: 2px solid #4e4e4e; /* Bordi dello stesso colore del testo */
+    padding: 5px 19px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transizioni per migliorare l'interazione */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    margin-right: 10px;
+}
+
+.entra:hover {
+    background-color: #e0e0e0; /* Colore di hover più scuro */
+    transform: translateY(-2px); /* Effetto di sollevamento */
+}
+
+/* Pulsante Elimina (pulsante chiaro con testo e bordi rossi) */
+.elimina {
+    background-color: #ffffff; /* Colore di sfondo chiaro */
+    color: #ff0000; /* Colore del testo rosso */
+    border-radius: 5px;
+    border: 2px solid #ff0000; /* Bordi rossi */
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transizioni per migliorare l'interazione */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    margin-left: 10px;
+}
+
+.elimina:hover {
+    background-color: #f2d6d6; /* Colore di hover*/
+    transform: translateY(-2px); /* Effetto di sollevamento */
+}
+
+/* Focus per entrambi i pulsanti */
+.entra:focus, .elimina:focus {
+    outline: none; /* Rimuove il contorno predefinito */
+    box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.5); /* Aggiunge un contorno blu per migliorare l'accessibilità */
+}
